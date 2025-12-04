@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Set base for GitHub Pages deployment under nibear01/Portfolio
-  base: '/Portfolio/',
+  // base: '/Portfolio/',
 })
