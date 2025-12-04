@@ -1,0 +1,152 @@
+.contact {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: white;
+
+  .container-left,
+  .container-right {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .container-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 64px;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 48px;
+      color: orange;
+      line-height: 1.1;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      h3 {
+        font-size: 16px;
+        color: gray;
+      }
+
+      h2 {
+        font-size: 20px;
+        color: #ddd;
+      }
+    }
+  }
+
+  .container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input,
+    textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 200ms ease, background 200ms ease;
+      font-size: 14px;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: orange;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 14px;
+      width: 200px;
+      cursor: pointer;
+      transition: background-color 200ms ease;
+      font-weight: 600;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 40px;
+
+    .container-left {
+      h1 {
+        font-size: 48px;
+      }
+      h2 {
+        font-size: 36px;
+      }
+
+      .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    }
+
+    .container-right {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 15px;
+    gap: 30px;
+
+    .container-left {
+      h1 {
+        font-size: 36px;
+      }
+      h2 {
+        font-size: 28px;
+      }
+
+      .contact-info {
+        h3 {
+          font-size: 14px;
+        }
+
+        h2 {
+          font-size: 16px;
+          word-break: break-all;
+        }
+      }
+    }
+
+    .container-right {
+      input,
+      textarea {
+        font-size: 13px;
+        padding: 10px 12px;
+      }
+
+      textarea {
+        min-height: 120px;
+      }
+    }
+  }
+}
